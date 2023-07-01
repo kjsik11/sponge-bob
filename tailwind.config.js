@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['var(--font-inter)', ...fontFamily.sans],
+        krabbyPatty: ['var(--font-krabbyPatty)'],
       },
     },
   },
