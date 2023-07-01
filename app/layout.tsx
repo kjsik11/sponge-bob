@@ -10,16 +10,6 @@ const inter = Inter({
   variable: '--font-inter',
 });
 
-const krabbyPatty = localFont({
-  src: [
-    {
-      path: './fonts/KrabbyPatty.ttf',
-      style: 'normal',
-    },
-  ],
-  variable: '--font-krabbyPatty',
-});
-
 const spongeBoy = localFont({
   src: [
     {
@@ -30,16 +20,6 @@ const spongeBoy = localFont({
   variable: '--font-spongeBoy',
 });
 
-const someTimeLater = localFont({
-  src: [
-    {
-      path: './fonts/SomeTimeLater.otf',
-      style: 'normal',
-    },
-  ],
-  variable: '--font-someTimeLater',
-});
-
 export const metadata: Metadata = {
   title: 'Nextjs.13',
   description: 'Next.js13 Template',
@@ -47,15 +27,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html
-      lang="en"
-      className={clsx(
-        inter.variable,
-        krabbyPatty.variable,
-        someTimeLater.variable,
-        spongeBoy.variable,
-      )}
-    >
+    <html lang="en" className={clsx(inter.variable, spongeBoy.variable)}>
       <head />
       <body>{children}</body>
     </html>
