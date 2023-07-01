@@ -20,6 +20,26 @@ const krabbyPatty = localFont({
   variable: '--font-krabbyPatty',
 });
 
+const spongeBoy = localFont({
+  src: [
+    {
+      path: './fonts/SpongeBoy.otf',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-spongeBoy',
+});
+
+const someTimeLater = localFont({
+  src: [
+    {
+      path: './fonts/SomeTimeLater.otf',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-someTimeLater',
+});
+
 export const metadata: Metadata = {
   title: 'Nextjs.13',
   description: 'Next.js13 Template',
@@ -27,11 +47,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={clsx(inter.variable, krabbyPatty.variable)}>
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
+    <html
+      lang="en"
+      className={clsx(
+        inter.variable,
+        krabbyPatty.variable,
+        someTimeLater.variable,
+        spongeBoy.variable,
+      )}
+    >
       <head />
       <body>{children}</body>
     </html>
